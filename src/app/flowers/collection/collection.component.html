@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-sm-12 flowerheading">
+      <h1>{{ param }}</h1>
+      <p>
+        Lovely selection of arrangements with {{ param }}. Comes in White,
+        blue,Red and yellow.
+      </p>
+    </div>
+  </div>
+  <div class="row flowerdetails">
+    <div
+      class="flowercolumn"
+      *ngFor="
+        let flower of flowers
+          | paginate
+            : {
+                itemsPerPage: itemsPerPage,
+                currentPage: p,
+                totalItems: totalItems
+              };
+        let i = index
+      "
+      [ngClass]="{ 'col-sm-4': i / 21 < 1 }"
+    >
+      <a
+        [routerLink]="['/collections/flower']"
+        [queryParams]="{ id: flower.flowerid }"
+      >
+        <img [src]="flower.image" />
+        <p class="flowername">{{ flower.name }}</p>
+        <p class="price">Rs. {{ flower.price }}</p>
+      </a>
+    </div>
+  </div>
+
+  <pagination-controls
+    (pageChange)="onPageChange($event)"
+  ></pagination-controls>
+</div>

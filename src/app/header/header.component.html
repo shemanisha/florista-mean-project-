@@ -1,0 +1,144 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="https://florista.in/">
+          <img
+            src="../../assets/floristaLogo.png"
+            alt="florista logo"
+            id="floristaLogo"
+          />
+        </a>
+      </div>
+      <div class="col-sm-6 contact-us">
+        <a href="https://florista.in/pages/contact-us">
+          <p class="contact">
+            We wish you a very Happy New Year & thank you with all our hearts
+            for your support. For flowers and surprises, mail us on
+            contact@florista.in OR Call/WhatsApp: +91 9833567045/ +91 9029948000
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="navigation col-sm-12">
+      <div class="flex-container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link">Ocassions</a>
+            <ul class="dropdown-content">
+              <li>
+                <a
+                  [routerLink]="['/collections']"
+                  [queryParams]="{
+                    occassion: 'Birthdays',
+                    pagesize: 6,
+                    currentPage: 1
+                  }"
+                  >Birthdays</a
+                >
+              </li>
+              <li>
+                <a
+                  [routerLink]="['/collections']"
+                  [queryParams]="{
+                    occassion: 'Anniversaries',
+                    pagesize: 6,
+                    currentPage: 1
+                  }"
+                  >Anniversaries</a
+                >
+              </li>
+              <li>
+                <a
+                  [routerLink]="['/collections']"
+                  [queryParams]="{
+                    occassion: 'Valentines',
+                    pagesize: 6,
+                    currentPage: 1
+                  }"
+                  >Valentines</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              [routerLink]="['/collections']"
+              [queryParams]="{ pagesize: 6, currentPage: 1 }"
+              >Flowers</a
+            >
+            <ul class="dropdown-content">
+              <li>
+                <a
+                  [routerLink]="['/collections']"
+                  [queryParams]="{ type: 'Rose', pagesize: 6, currentPage: 1 }"
+                  >Rose</a
+                >
+              </li>
+              <li>
+                <a
+                  [routerLink]="['/collections']"
+                  [queryParams]="{
+                    type: 'Lillies',
+                    pagesize: 6,
+                    currentPage: 1
+                  }"
+                  >Lillies</a
+                >
+              </li>
+              <li>
+                <a
+                  [routerLink]="['/collections']"
+                  [queryParams]="{
+                    type: 'Orchids',
+                    pagesize: 6,
+                    currentPage: 1
+                  }"
+                  >Orchids</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link disabled" routerLink="/login">Sign In</a>
+          </li> -->
+          <li class="nav-item" *ngIf="userIsAuthenticated">
+            <button (click)="onLogOut()">Logout</button>
+          </li>
+
+          <!-- <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link disabled" routerLink="/signup"
+              >create an account</a
+            >
+          </li> -->
+          <li class="nav-item" *ngIf="userIsAuthenticated">
+            <a class="nav-link disabled" routerLink="/createFlower"
+              >create a Flower</a
+            >
+          </li>
+          <li class="nav-item">
+            <input
+              type="search"
+              placeholder="Search all products..."
+              value=""
+            />
+            <button type="button" class="search">
+              <i class="fa fa-search"></i>
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" routerLink="/cart">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

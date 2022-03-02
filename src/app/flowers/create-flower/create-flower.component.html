@@ -1,0 +1,139 @@
+<div class="flowerWrapper">
+  <div class="container">
+    <h1>Add New Flower</h1>
+    <div class="addnewflowerform">
+      <form [formGroup]="form" (submit)="onSaveFlower1()" class="addnewflower">
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="flowername">Flower Name*</label>
+            <input
+              type="text"
+              id="flowername"
+              class="form-control"
+              formControlName="name"
+            />
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="form.get('name')!.invalid"
+            >
+              Flower name is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="flowerdescription">Description*</label>
+            <textarea
+              id="flowerdescription"
+              class="form-control"
+              formControlName="description"
+            ></textarea>
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="form.get('description')!.invalid"
+            >
+              Description is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="price">Price*</label>
+            <input
+              type="number"
+              id="price"
+              class="form-control"
+              formControlName="price"
+            />
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="form.get('price')!.invalid"
+            >
+              Flower price is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="image">Image*</label>
+            <input
+              type="file"
+              id="image"
+              class="form-control"
+              (change)="onImagePicked($event)"
+            />
+            <div
+              class="imagepreview"
+              *ngIf="
+                imagePreview !== '' && imagePreview && form.get('image').valid
+              "
+            >
+              <img [src]="imagePreview" [alt]="form.get('name')" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="flowerType">FlowerType*</label>
+            <select id="flowerType" class="form-control" formControlName="type">
+              <option>Rose</option>
+              <option>Lillies</option>
+              <option>Orchids</option>
+            </select>
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="form.get('type')!.invalid"
+            >
+              Flower type is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="occassion">Occassion*</label>
+            <select
+              id="Occassion"
+              class="form-control"
+              formControlName="occassion"
+            >
+              <option>Birthdays</option>
+              <option>Valentines</option>
+              <option>Anniversaries</option>
+            </select>
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="form.get('occassion')!.invalid"
+            >
+              Occassion is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="Color">Color*</label>
+            <select id="Color" class="form-control" formControlName="color">
+              <option value="1">Red</option>
+              <option value="2">Yellow</option>
+              <option value="3">Pink</option>
+              <option value="4">Blue</option>
+              <option value="5">White</option>
+            </select>
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="form.get('color')!.invalid"
+            >
+              Flower color is required
+            </div>
+          </div>
+        </div>
+        <button class="addFlower btn btn-default" type="submit">ADD</button>
+      </form>
+    </div>
+  </div>
+</div>

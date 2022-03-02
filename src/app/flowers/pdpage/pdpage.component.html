@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-sm-4 flowerImage">
+    <img [src]="flower && flower[0].image" class="flowerImage" />
+  </div>
+  <div class="col-sm-6">
+    <h2 class="name">{{ flower && flower[0].name }}</h2>
+    <p class="price">Rs.{{ flower && flower[0].price }}</p>
+    <p class="description">{{ flower && flower[0].description }}</p>
+    <div class="shipping">
+      <a href="#">Shipping</a>
+      Calculated at checkout
+    </div>
+
+    <form>
+      <div class="additionalInformation">
+        <label for="deliverydate">Choose delivery date</label>
+        <input type="date" id="deliverydate" name="deliverydate" />
+        <label for="messageOnCard">Message on card</label>
+        <textarea
+          name="messageOnCard"
+          id="messageOnCard"
+          cols="30"
+          rows="10"
+          placeholder="*message on card"
+        ></textarea>
+      </div>
+      <button class="addToCart btn btn-primary" (click)="addToCart()">
+        Add to cart
+      </button>
+      <button class="BuyNow btn btn-primary">Buy now</button>
+      <button
+        *ngIf="userIsAuthenticated"
+        class="updateButton btn btn-primary"
+        (click)="updateFlower(flower[0].flowerid)"
+      >
+        Update Flower
+      </button>
+      <button
+        *ngIf="userIsAuthenticated"
+        class="deleteButton btn btn-danger"
+        (click)="deleteFlower(flower[0].flowerid)"
+      >
+        Delete Flower
+      </button>
+    </form>
+  </div>
+  <!-- <div class="col-sm-2">
+    <app-cart></app-cart>
+  </div> -->
+</div>
+
+<!-- <p>{{ flower[0].name }}</p>
+<img [src]="flower[0].image" />
+<p>{{ flower[0].price }}</p>
+<p>{{ flower[0].description }}</p> -->

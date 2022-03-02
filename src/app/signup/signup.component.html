@@ -1,0 +1,72 @@
+<div class="login">
+  <div class="loginForm">
+    <h1>Create Account</h1>
+    <form (submit)="onSubmit(signupForm)" #signupForm="ngForm">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="firstname"
+          ngModel
+          placeholder="First Name"
+          #firstname="ngModel"
+          required
+        />
+        <div class="alert alert-danger" role="alert" *ngIf="firstname.invalid">
+          Please enter valid firstname
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="lastname"
+          ngModel
+          placeholder="Last Name"
+          #lastname="ngModel"
+          required
+        />
+        <div class="alert alert-danger" role="alert" *ngIf="lastname.invalid">
+          Please enter valid lastname
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          name="Email"
+          ngModel
+          placeholder="Email"
+          #email="ngModel"
+          required
+          email
+        />
+        <div class="alert alert-danger" role="alert" *ngIf="email.invalid">
+          Please enter valid email
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          ngModel
+          name="Password"
+          placeholder="Password"
+          #Password="ngModel"
+          required
+          password
+        />
+        <div class="alert alert-danger" role="alert" *ngIf="Password.invalid">
+          Please enter valid password
+        </div>
+      </div>
+
+      <div style="text-align: center">
+        <button type="submit" class="loginbutton btn btn-default">
+          Create
+        </button>
+      </div>
+      <p>or <a href="">Return to store</a></p>
+    </form>
+  </div>
+</div>

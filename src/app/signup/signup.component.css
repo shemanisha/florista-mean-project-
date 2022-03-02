@@ -1,0 +1,38 @@
+h1 {
+  color: #545454;
+  font-size: 1.733em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.loginForm {
+  max-width: 340px;
+  margin: 0 auto;
+}
+form input[type="text"],
+input[type="password"] {
+  background-color: #dcdada;
+  border-radius: 0px;
+}
+
+.login {
+  background-color: #f3f3f3;
+  padding: 30px 30px 60px 30px;
+}
+.loginbutton {
+  background-color: #9c756f;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px 20px;
+  margin-bottom: 16px;
+}
+form input[type="email"],
+input[type="password"] {
+  background-color: #dcdada;
+  border-radius: 0px;
+}
+p {
+  text-align: center;
+}
+a {
+  color: #9c756f;
+}

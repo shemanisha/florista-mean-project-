@@ -1,0 +1,30 @@
+* {
+  font-family: Zurich, sans-serif;
+  font-size: 15px;
+  color: #545454;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #212121;
+}
+.socialmediaicons ul {
+  text-align: center;
+}
+.fa {
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+li {
+  display: inline-block;
+}
+
+.bottomFooter ul li {
+  font-size: 13px;
+}

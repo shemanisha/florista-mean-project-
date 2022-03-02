@@ -1,0 +1,25 @@
+.flowerWrapper {
+  background-color: #f3f3f3;
+}
+.container > h1 {
+  color: #545454;
+  font-size: 1.733em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.addFlower {
+  background-color: #9c756f;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 16px;
+  padding: 8px 20px;
+}
+
+.imagePreview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.imagePreview img {
+  height: 100%;
+}

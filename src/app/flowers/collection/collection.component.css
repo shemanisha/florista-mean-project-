@@ -1,0 +1,45 @@
+* {
+  font-size: 19px;
+}
+.price {
+  color: #545454;
+}
+.wrapper {
+  background-color: #f3f3f3;
+}
+.flowerWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+img:hover {
+  opacity: 0.8;
+}
+.flowername {
+  font-size: 20px;
+  font-weight: 400px;
+}
+.flowerdetails {
+  margin: 20px;
+}
+.flowerheading {
+  text-align: center;
+  border-bottom: 1px solid #dedede;
+}
+
+.flowercolumn {
+  text-align: center;
+}
+img {
+  width: 250.8px;
+  height: 250.8px;
+}
+a {
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul.ngx-pagination {
+  text-align: center !important;
+}
